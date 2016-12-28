@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <title>MainPage</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.css"  th:href="@{/css/bootstrap.css}" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/reset/channel.css"  th:href="@{/css/reset/channel.css}" type="text/css"/>
+    <script type="text/javascript" src="../static/js/lib/jquery.min.js" th:src="@{/js/lib/jquery.min.js}"></script>
+    <script data-main="js/channel" th:src="@{js/lib/require.js}"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li style="margin-left:20px;color:#c1d0db;margin-top:20px;"><h4>数据监控</h4></li>
+                    <li><a href="#" data-index="1" page="dataControl">导流数据监控</a></li>
+                    <li><a href="#" data-index="2" page="putControl">投放数据监控</a></li>
+                    <li style="margin-left:20px;color:#c1d0db"><h4>渠道信息</h4></li>
+                    <li><a href="#" data-index="1" page="channeFormation">导流渠道信息</a></li>
+                    <li><a href="#" data-index="2" page="channeFormation">投放渠道信息</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <main id="show">
+                     <iframe id="frame_info" class="page1" src="defaultPage"></iframe>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var code = "";
+    var level = 0;
+    var channelName = "渠道商";
+    var channelVal;
+</script>
+</html>
